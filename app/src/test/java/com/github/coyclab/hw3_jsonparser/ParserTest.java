@@ -59,5 +59,7 @@ public class ParserTest {
         assertTrue(productList.getProductList().size() == 4);
         assertEquals(productList.getProductList().get(1).getName(), "TV");
         assertEquals(productList.getProductList().get(3).getDiscount(), 15);
+
+        ShadowLog.v("Date", productList.getProductList().get(1).getFromDate().toString());
     }
 }
