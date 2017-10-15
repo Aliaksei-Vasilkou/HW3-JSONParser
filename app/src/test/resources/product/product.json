@@ -1,0 +1,33 @@
+{
+  "products":[
+    {
+      "name": "Computer",
+      "price": 120,
+      "discount": 20,
+      "fromdate": 1507593600000,
+      "todate": 1508198400000
+    },
+    {
+      "name": "TV",
+      "price": 150,
+      "discount": 25,
+      "fromdate": 1507593600000,
+      "todate": 1508198400000
+    },
+    {
+      "name": "Microwave Oven",
+      "price": 50,
+      "discount": 10,
+      "fromdate": 1507593600000,
+      "todate": 1508198400000
+    },
+    {
+      "name": "Vacuum Cleaner",
+      "price": 60,
+      "discount": 15,
+      "fromdate": 1507593600000,
+      "todate": 1508198400000
+    }
+  ],
+  "backend_version": 1
+}
