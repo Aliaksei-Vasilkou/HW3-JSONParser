@@ -7,12 +7,15 @@ import org.json.JSONException;
 import java.util.LinkedList;
 import java.util.List;
 
-public class ProductListGson implements IProductList {
+class ProductListGson implements IProductList {
 
-    @SerializedName("products")
+    private static final String PRODUCTS = "products";
+    private static final String BACKEND_VERSION = "backend_version";
+
+    @SerializedName(PRODUCTS)
     private List<ProductGson> mProductList;
 
-    @SerializedName("backend_version")
+    @SerializedName(BACKEND_VERSION)
     private int backendVersion;
 
     @Override

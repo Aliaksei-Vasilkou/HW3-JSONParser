@@ -4,21 +4,27 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.Date;
 
-public class ProductGson implements IProduct {
+class ProductGson implements IProduct {
 
-    @SerializedName("name")
+    private static final String NAME = "name";
+    private static final String PRICE = "price";
+    private static final String DISCOUNT = "discount";
+    private static final String FROMDATE = "fromdate";
+    private static final String TODATE = "todate";
+
+    @SerializedName(NAME)
     private String name;
 
-    @SerializedName("price")
+    @SerializedName(PRICE)
     private Double price;
 
-    @SerializedName("discount")
+    @SerializedName(DISCOUNT)
     private int discount;
 
-    @SerializedName("fromdate")
+    @SerializedName(FROMDATE)
     private Long fromDate;
 
-    @SerializedName("todate")
+    @SerializedName(TODATE)
     private Long toDate;
 
     @Override

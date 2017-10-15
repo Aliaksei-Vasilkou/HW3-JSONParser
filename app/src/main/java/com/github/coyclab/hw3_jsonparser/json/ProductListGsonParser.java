@@ -6,17 +6,17 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 
-public class ProductListGsonParser implements IParser {
+class ProductListGsonParser implements IParser {
 
     private final InputStream mInputStream;
 
-    public ProductListGsonParser(InputStream pInputStream) {
+    ProductListGsonParser(final InputStream pInputStream) {
         mInputStream = pInputStream;
     }
 
     @Override
     public IProductList parse() throws Exception {
         final Reader reader = new InputStreamReader(mInputStream);
-        return new Gson().fromJson(reader,ProductListGson.class);
+        return new Gson().fromJson(reader, ProductListGson.class);
     }
 }

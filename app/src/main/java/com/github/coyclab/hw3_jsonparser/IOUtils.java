@@ -9,6 +9,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class IOUtils {
+
     public static String toString(final InputStream inputStream) throws IOException {
         InputStreamReader inputStreamReader = null;
         BufferedReader reader = null;

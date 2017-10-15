@@ -7,24 +7,27 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductListJsonWrapper implements IProductList {
+class ProductListJsonWrapper implements IProductList {
 
+    private static final String PRODUCTS = "products";
+    private static final String BACKEND_VERSION = "backend_version";
     private final JSONObject mProductList;
 
-    public ProductListJsonWrapper(JSONObject pProductList) {
+    ProductListJsonWrapper(final JSONObject pProductList) {
         mProductList = pProductList;
     }
 
     @Override
     public List<IProduct> getProductList() throws JSONException {
         final List<IProduct> temp = new ArrayList<>();
-        final JSONArray productList = mProductList.getJSONArray("products");
+        final JSONArray productList = mProductList.getJSONArray(PRODUCTS);
         for (int i = 0; i < productList.length(); i++) {
             temp.add(new ProductJsonWrapper(productList.getJSONObject(i)));
         }
         return temp;
     }
-    public int getBackendVersion(){
-        return mProductList.optInt("backend_version");
+
+    public int getBackendVersion() {
+        return mProductList.optInt(BACKEND_VERSION);
     }
 }
